@@ -10,6 +10,70 @@ namespace Guessmynumber2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter a number between 0 and 10");
+            Guesser();
+            Guesser();
+            Guesser();
+            Guesser();
+           
         }
+        public static void Guesser()
+        {
+            
+            Random rand = new Random();
+            int guess = rand.Next(0, 10);
+            int playernumber = 0;
+            string response = Console.ReadLine();
+            
+
+            for(int i = 1; i <5; i++)
+            {
+                playernumber = Convert.ToInt32(Console.ReadLine());
+                
+                if (guess != playernumber)
+                {
+                    Console.WriteLine("try again");
+                }
+                
+                else
+                {
+
+                    Console.WriteLine("Congratulations! Number was.... {0}  !!", guess);
+                    i = 5;
+                }
+                if (i == 4)
+                {
+
+                    Console.WriteLine("You lose.You have reached the maximum number of attempts (4) ");
+
+                    Console.Write("Try again?");
+                    
+
+
+                    if (true)
+                    {
+
+                    }
+
+
+                }
+
+
+            }
+
+            ConsoleKeyInfo cki;
+            while (true)
+            {
+                cki = Console.ReadKey();
+                if (cki.Key == ConsoleKey.Spacebar)
+                    break;
+
+            }
+        }
+         
+            
+        }
+
+        
     }
-}
+
